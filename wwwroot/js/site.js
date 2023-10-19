@@ -30,3 +30,21 @@ const handleTheme = () => {
 }
 
 btnTheme.addEventListener('click', handleTheme);
+
+const scrollLeftButton = document.getElementById("scroll-left-button");
+const scrollRightButton = document.getElementById("scroll-right-button");
+const scrollContainer = document.querySelector(".hide-scroll-bar");
+
+scrollLeftButton.addEventListener("click", function() {
+    scrollContainer.scrollBy({
+        left: -100,
+        behavior: "smooth"
+    });
+});
+
+scrollRightButton.addEventListener("click", function() {
+    scrollContainer.scrollBy({
+        left: 100,
+        behavior: "smooth"
+    });
+});
