@@ -6,6 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="~/img/biblioteca.png">
     <title>Biblioteca</title>
 
     <!--Css y Tailwind-->
@@ -13,12 +14,72 @@
     <!--Icons-->
     <script src="https://kit.fontawesome.com/be9e926d45.js" crossorigin="anonymous"></script>
 </head>
-<body class="bg-amber-300 dark:bg-amber-700">
-    <h1 class="font-extrabold text-2xl text-red-800">Hola mundo!!</h1>
-
-    <button id="btnTheme" type="button" class="px-3 py-2 rounded bg-gray-600 dark:bg-gray-300">
-        <i id="iconTheme" class="fas fa-sun"></i>
-    </button>
+<body>
+    <div class="fixed w-full bg-white/80 backdrop-blur-sm dark:bg-zinc-800/80 z-10">
+        <div class="max-w-nav mx-auto p-2 md:p-4">
+            <div class="w-full flex flex-wrap justify-between items-center">
+                <h1 class="text-xl md:text-2xl
+                font-bold
+                text-black
+                dark:text-white">
+                    Biblioteca
+                </h1>
+                <nav>
+                    <ul class="flex justify-center items-center gap-6 text-black dark:text-white font-semibold">
+                        <li>
+                            <a href="#" class="hover:underline hover:underline-offset-4">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline hover:underline-offset-4 text-zinc-500">¿Quienes somos?</a>
+                        </li>
+                        <li>
+                            <a href="#" class="hover:underline hover:underline-offset-4 text-zinc-500">Productos</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="flex gap-4">
+                    <div class="flex gap-4">
+                        <a class="px-3 py-2 rounded bg-transparent cursor-pointer text-dark dark:text-white">
+                        Registrarse
+                        </a>
+                        <a class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 cursor-pointer text-white">
+                        Iniciar Sesión
+                        </a>
+                    </div>
+                    <button id="btnTheme" type="button" class="px-3 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700">
+                        <i id="iconTheme" class="fas fa-sun dark:text-amber-300"></i>
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <header class="h-screen text-gray-600 body-font bg-white dark:bg-zinc-800 md:overflow-hidden">
+        <div class="h-full container mx-auto flex md:px-24 md:py-10 py-20 lg:flex-row flex-col items-center md:justify-center">
+            <div
+                class="lg:flex-grow mt-5 lg:mt-0   lg:w-1.5/2 lg:pr-24 flex flex-col lg:items-start lg:text-left mb-16 lg:mb-0 items-center text-center">
+                <h1
+                    class="text-2xl font-extrabold leading-9 tracking-tight mb-3 text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal">
+                    Sumérgete en el Sabor y la Cultura
+                </h1>
+                <p class="mb-8 md:pl-0  pl-2 pr-2 leading-relaxed text-zinc-500">
+                    Donde cada taza cuenta una historia y cada libro abre un nuevo mundo. Bienvenido a Proyecto Café.
+                </p>
+                <div class="flex justify-center">
+                    <a href="#"
+                        class="inline-flex text-white bg-amber-700 border-0 py-2 px-6 focus:outline-none hover:bg-amber-600 rounded text-lg">
+                        Iniciar Sesión
+                    </a>
+                    <a href="#"
+                        class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
+                        Ver más</a>
+                </div>
+            </div>
+            <div class="max-w-lg lg:w-full mb-5 md:mb-0 w-3/6">
+                <img class="object-cover object-center rounded aspect-[16/9] lg:aspect-[9/16]" alt="hero" src="~/img/hero-coffe.jpg">
+            </div>
+        </div>
+    </header>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
