@@ -23,8 +23,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/penad/Desktop/aspnet/biblioteca/Views/Shared/_LayoutPrincipal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRQcmluY2lwYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/penad/Desktop/aspnet/biblioteca/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/penad/Desktop/aspnet/biblioteca/Views/Signin/Iniciar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnbmluXEluaWNpYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/penad/Desktop/aspnet/biblioteca/Views/Signin/Registrar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2lnbmluXFJlZ2lzdHJhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/penad/Desktop/aspnet/biblioteca/Views/_ViewImports.cshtml]

@@ -1,413 +1,344 @@
 ﻿@{
-    Layout = null;
+    Layout = "~/Views/Shared/_layoutPrincipal.cshtml";
 }
-<!DOCTYPE html>
-<html lang="es" class="!scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="~/img/biblioteca.png">
-    <title>Proyecto Café</title>
 
-    <!--Css y Tailwind-->
-    <link rel="stylesheet" href="~/css/output.css">
-    <!--Icons-->
-    <script src="https://kit.fontawesome.com/be9e926d45.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <!--navbar-->
-    <div class="fixed w-full bg-white/80 backdrop-blur-sm dark:bg-zinc-800/80 z-10">
-        <div class="max-w-nav mx-auto p-2 md:p-4">
-            <div class="w-full flex flex-wrap justify-between items-center">
-                <h1 class="text-xl md:text-2xl
-                font-bold
-                text-black
-                dark:text-white">
-                    Proyecto Café
-                </h1>
-                <div id="bgBlackBtn" class="hidden absolute top-0 left-0 w-screen h-screen bg-black/25"></div>
-                <nav id="menu" class="fixed lg:static top-0 right-0 lg:p-0 px-3 py-2 lg:min-h-0 min-h-screen lg:bg-transparent lg:dark:bg-transparent bg-white dark:bg-black/80 lg:z-0 z-10 flex justify-center items-center lg:translate-x-0 translate-x-full transition duration-500 ease-in-out">
-                    <div id="btnClose" class="block lg:hidden absolute top-3 right-4 px-3 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700 cursor-pointer">
-                        <i class="fas fa-times text-black dark:text-white"></i>
-                    </div>
-                    <ul class="flex lg:flex-row flex-col justify-center items-center gap-6 font-semibold lg:p-0 p-4">
-                        <li>
-                            <a href="#" class="hover:underline hover:underline-offset-4 text-black dark:text-white link">Inicio</a>
-                        </li>
-                        <li>
-                            <a href="#nosotros" class="hover:underline hover:underline-offset-4 text-zinc-500 link">¿Quienes somos?</a>
-                        </li>
-                        <li>
-                            <a href="#productos" class="hover:underline hover:underline-offset-4 text-zinc-500 link">Productos</a>
-                        </li>
-                        <li>
-                            <a href="#testimonios" class="hover:underline hover:underline-offset-4 text-zinc-500 link">Testimonios</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="flex justify-center items-center gap-4">
-                    <div class="hidden lg:flex gap-4">
-                        <a class="px-3 py-2 rounded bg-transparent cursor-pointer text-dark dark:text-white">
-                        Registrarse
-                        </a>
-                        <a class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 cursor-pointer text-white">
-                        Iniciar Sesión
-                        </a>               
-                    </div>
-                    <a class="block lg:hidden px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 cursor-pointer text-white">
-                        <i class="fas fa-sign-in-alt"></i>
-                    </a>
-                    <button id="btnTheme" type="button" class="px-3 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700">
-                        <i id="iconTheme" class="fas fa-sun dark:text-amber-300"></i>
-                    </button>
-                    <button id="btnMenu" type="button" class="block lg:hidden px-3 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700">
-                        <i class="fas fa-bars text-black dark:text-white"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
+<header class="relative h-screen text-gray-600 body-font bg-white dark:bg-zinc-800 md:overflow-hidden">
+    <div class="absolute bottom-0 left-1/2 animate-bounce mb-4">
+        <i class="fas fa-arrow-circle-down text-amber-600"></i>
     </div>
-    <header class="relative h-screen text-gray-600 body-font bg-white dark:bg-zinc-800 md:overflow-hidden">
-        <div class="absolute bottom-0 left-1/2 animate-bounce mb-4">
-            <i class="fas fa-arrow-circle-down text-amber-600"></i>
-        </div>
-        <div class="h-full container mx-auto flex md:px-24 md:py-10 py-20 lg:flex-row flex-col items-center md:justify-center">
-            <div
-                class="lg:flex-grow mt-5 lg:mt-0   lg:w-1.5/2 lg:pr-24 flex flex-col lg:items-start lg:text-left mb-16 lg:mb-0 items-center text-center">
-                <h1
-                    class="text-2xl font-extrabold leading-9 tracking-tight mb-3 text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal">
-                    Sumérgete en el Sabor y la Cultura
-                </h1>
-                <p class="mb-8 md:pl-0  pl-2 pr-2 leading-relaxed text-zinc-500">
-                    Donde cada taza cuenta una historia y cada libro abre un nuevo mundo. Bienvenido a Proyecto Café.
-                </p>
-                <div class="flex justify-center">
-                    <a href="#"
-                        class="inline-flex text-white bg-amber-700 border-0 py-2 px-6 focus:outline-none hover:bg-amber-600 rounded text-lg">
-                        Iniciar Sesión
-                    </a>
-                    <a href="#"
-                        class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-                        Ver más</a>
-                </div>
-            </div>
-            <div class="max-w-lg lg:w-full mb-5 md:mb-0 w-3/6">
-                <img class="object-cover object-center rounded aspect-[16/9] lg:aspect-[9/16]" alt="hero" src="~/img/hero-coffe.jpg">
-            </div>
-        </div>
-    </header>
-    <!--about us-->
-    <section id="nosotros" class="py-20 text-gray-600 body-font bg-white dark:bg-zinc-800 md:overflow-hidden">
-        <div class="h-full container mx-auto flex md:px-20 py-10 lg:flex-row flex-col-reverse items-center md:justify-center">            
-            <div class="max-w-lg lg:w-full mb-5 md:mb-0 w-3/6">
-                <img class="object-cover object-center rounded aspect-[16/9]" alt="hero" src="~/img/about.jpg">
-            </div>
-            <div
-                class="lg:flex-grow lg:w-1.5/2 lg:pl-20 flex flex-col lg:items-start lg:text-left lg:mb-0 mb-16 lg:mt-0 items-center text-center">
-                <h1
-                    class="text-xl font-extrabold leading-9 tracking-tight mb-3 text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-3xl md:leading-normal">
-                    Sobre Nosotros
-                </h1>
-                <p class="mb-8 md:pl-0  pl-2 pr-2 leading-relaxed text-zinc-500 max-w-lg">
-                    Nuestro equipo está comprometido en brindarte una experiencia única.
-                    Explora nuestra colección de libros digitales mientras disfrutas del aroma del café recién hecho.
-                    Nos esforzamos por crear un ambiente cálido y amigable donde los amantes del café y los lectores ávidos 
-                    pueden reunirse, aprender y compartir sus pasiones.
-                </p>
-                <h3 class="text-xl lg:text-2xl font-semibold mb-2 text-gray-900 dark:text-gray-100">Horarios de Atención:</h3>
-                <p class="text-zinc-500 list-disc">Lunes a Viernes: 8:00 am - 5:00 pm</p>
-
-            </div>
-        </div>
-    </section>
-    <!--Productos-->
-    <div id="productos" class="py-10 bg-white dark:bg-zinc-800">
-        <div class="container mx-auto flex flex-col gap-8 md:px-24 py-10">
-            <h1 class="text-xl font-extrabold leading-9 tracking-tight mb-3 text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-3xl md:leading-normal text-center">
-            Productos
+    <div class="h-full container mx-auto flex md:px-24 md:py-10 py-20 lg:flex-row flex-col items-center md:justify-center">
+        <div
+            class="lg:flex-grow mt-5 lg:mt-0   lg:w-1.5/2 lg:pr-24 flex flex-col lg:items-start lg:text-left mb-16 lg:mb-0 items-center text-center">
+            <h1
+                class="text-2xl font-extrabold leading-9 tracking-tight mb-3 text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-normal">
+                Sumérgete en el Sabor y la Cultura
             </h1>
-            <div class="flex justify-between items-center">
-                <div class="flex justify-start items-center gap-4">
-                    <button id="scroll-left-button" class="bg-amber-700 hover:bg-amber-500 px-4 py-2 rounded-full"><i class="fas fa-chevron-left"></i></button>
-                    <button id="scroll-right-button" class="bg-amber-700 hover:bg-amber-500 px-4 py-2 rounded-full"><i class="fas fa-chevron-right"></i></button>
-                </div>
-                <a href="#" class="px-3 py-2 rounded hover:bg-amber-700 text-zinc-500 hover:text-white">Ver todos</a>
-            </div>
-            
-            <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
-                <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
-                    <div class="inline-block px-3">
-                        <div class="relative w-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-700 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300 ease-in-out group">
-                            <img src="~/img/libro.jpg" class="object-cover object-center w-full" alt="/">
-                            <div class="absolute bottom-4 right-4 px-3 py-2 rounded backdrop-blur-md cursor-pointer">
-                                <i class="fas fa-hand-point-up text-amber-600 text-2xl"></i>
-                            </div>
-                            <div class="absolute hidden group-hover:block top-0 left-0 w-full h-full z-10 bg-black/80 opacity-0 transform scale-95 group-hover:opacity-100 group-hover:scale-100 transition-opacity duration-300 ease-in-out">
-                                <div class="w-full h-full flex flex-col gap-8 justify-center items-center">
-                                    <h2 class="text-white text-2xl font-semibold">Titulo</h2>
-                                    <span class="px-3 py-1 bg-green-800 rounded">
-                                        <p class="text-green-300">Disponible</p>
-                                    </span>
-                                    <a href="#" class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 text-white text-center cursor-pointer">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Contactar
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class="relative w-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-700 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300 ease-in-out group">
-                            <img src="~/img/libro2.jpg" class="object-cover object-center w-full" alt="/">
-                            <div class="absolute bottom-4 right-4 px-3 py-2 rounded backdrop-blur-md cursor-pointer">
-                                <i class="fas fa-hand-point-up text-amber-600 text-2xl"></i>
-                            </div>
-                            <div class="absolute hidden group-hover:block top-0 left-0 w-full h-full z-10 bg-black/80 transition duration-500 ease-in-out">
-                                <div class="w-full h-full flex flex-col gap-8 justify-center items-center">
-                                    <h2 class="text-white text-2xl font-semibold">Titulo</h2>
-                                    <span class="px-3 py-1 bg-green-800 rounded">
-                                        <p class="text-green-300">Disponible</p>
-                                    </span>
-                                    <a href="#" class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 text-white text-center cursor-pointer">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Contactar
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class="relative w-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-700 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300 ease-in-out group">
-                            <img src="~/img/libro3.jpg" class="object-cover object-center w-full" alt="/">
-                            <div class="absolute bottom-4 right-4 px-3 py-2 rounded backdrop-blur-md cursor-pointer">
-                                <i class="fas fa-hand-point-up text-amber-600 text-2xl"></i>
-                            </div>
-                            <div class="absolute hidden group-hover:block top-0 left-0 w-full h-full z-10 bg-black/80 transition duration-500 ease-in-out">
-                                <div class="w-full h-full flex flex-col gap-8 justify-center items-center">
-                                    <h2 class="text-white text-2xl font-semibold">Titulo</h2>
-                                    <span class="px-3 py-1 bg-green-800 rounded">
-                                        <p class="text-green-300">Disponible</p>
-                                    </span>
-                                    <a href="#" class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 text-white text-center cursor-pointer">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Contactar
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class="relative w-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-700 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300 ease-in-out group">
-                            <img src="~/img/libro4.jpg" class="object-cover object-center w-full" alt="/">
-                            <div class="absolute bottom-4 right-4 px-3 py-2 rounded backdrop-blur-md cursor-pointer">
-                                <i class="fas fa-hand-point-up text-amber-600 text-2xl"></i>
-                            </div>
-                            <div class="absolute hidden group-hover:block top-0 left-0 w-full h-full z-10 bg-black/80 transition duration-500 ease-in-out">
-                                <div class="w-full h-full flex flex-col gap-8 justify-center items-center">
-                                    <h2 class="text-white text-2xl font-semibold">Titulo</h2>
-                                    <span class="px-3 py-1 bg-green-800 rounded">
-                                        <p class="text-green-300">Disponible</p>
-                                    </span>
-                                    <a href="#" class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 text-white text-center cursor-pointer">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Contactar
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class="relative w-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-700 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300 ease-in-out group">
-                            <img src="~/img/libro5.jpg" class="object-cover object-center w-full" alt="/">
-                            <div class="absolute bottom-4 right-4 px-3 py-2 rounded backdrop-blur-md cursor-pointer">
-                                <i class="fas fa-hand-point-up text-amber-600 text-2xl"></i>
-                            </div>
-                            <div class="absolute hidden group-hover:block top-0 left-0 w-full h-full z-10 bg-black/80 transition duration-500 ease-in-out">
-                                <div class="w-full h-full flex flex-col gap-8 justify-center items-center">
-                                    <h2 class="text-white text-2xl font-semibold">Titulo</h2>
-                                    <span class="px-3 py-1 bg-green-800 rounded">
-                                        <p class="text-green-300">Disponible</p>
-                                    </span>
-                                    <a href="#" class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 text-white text-center cursor-pointer">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Contactar
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class="relative w-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-700 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300 ease-in-out group">
-                            <img src="~/img/libro6.jpg" class="object-cover object-center w-full" alt="/">
-                            <div class="absolute bottom-4 right-4 px-3 py-2 rounded backdrop-blur-md cursor-pointer">
-                                <i class="fas fa-hand-point-up text-amber-600 text-2xl"></i>
-                            </div>
-                            <div class="absolute hidden group-hover:block top-0 left-0 w-full h-full z-10 bg-black/80 transition duration-500 ease-in-out">
-                                <div class="w-full h-full flex flex-col gap-8 justify-center items-center">
-                                    <h2 class="text-white text-2xl font-semibold">Titulo</h2>
-                                    <span class="px-3 py-1 bg-green-800 rounded">
-                                        <p class="text-green-300">Disponible</p>
-                                    </span>
-                                    <a href="#" class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 text-white text-center cursor-pointer">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Contactar
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class="relative w-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-700 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300 ease-in-out group">
-                            <img src="~/img/libro7.jpg" class="object-cover object-center w-full" alt="/">
-                            <div class="absolute bottom-4 right-4 px-3 py-2 rounded backdrop-blur-md cursor-pointer">
-                                <i class="fas fa-hand-point-up text-amber-600 text-2xl"></i>
-                            </div>
-                            <div class="absolute hidden group-hover:block top-0 left-0 w-full h-full z-10 bg-black/80 transition duration-500 ease-in-out">
-                                <div class="w-full h-full flex flex-col gap-8 justify-center items-center">
-                                    <h2 class="text-white text-2xl font-semibold">Titulo</h2>
-                                    <span class="px-3 py-1 bg-green-800 rounded">
-                                        <p class="text-green-300">Disponible</p>
-                                    </span>
-                                    <a href="#" class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 text-white text-center cursor-pointer">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Contactar
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="inline-block px-3">
-                        <div class="relative w-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-700 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300 ease-in-out group">
-                            <img src="~/img/libro8.jpg" class="object-cover object-center w-full" alt="/">
-                            <div class="absolute bottom-4 right-4 px-3 py-2 rounded backdrop-blur-md cursor-pointer">
-                                <i class="fas fa-hand-point-up text-amber-600 text-2xl"></i>
-                            </div>
-                            <div class="absolute hidden group-hover:block top-0 left-0 w-full h-full z-10 bg-black/80 transition duration-500 ease-in-out">
-                                <div class="w-full h-full flex flex-col gap-8 justify-center items-center">
-                                    <h2 class="text-white text-2xl font-semibold">Titulo</h2>
-                                    <span class="px-3 py-1 bg-green-800 rounded">
-                                        <p class="text-green-300">Disponible</p>
-                                    </span>
-                                    <a href="#" class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 text-white text-center cursor-pointer">
-                                        <i class="fab fa-whatsapp"></i>
-                                        Contactar
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--testimonios-->
-    <div id="testimonios" class="py-16 bg-white dark:bg-zinc-800">  
-        <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
-            <h2 class="mb-12 text-center text-2xl text-gray-900 dark:text-gray-100 font-bold md:text-4xl">¿Que dicen nuestros clientes?</h2>
-            <div class="grid gap-8 md:grid-rows-2 lg:grid-cols-2">
-            <div class="row-span-2 p-6 border border-gray-100 rounded-xl bg-gray-50 text-center sm:p-8">
-                <div class="h-full flex flex-col justify-center space-y-4">
-                <img class="w-20 h-20 mx-auto rounded-full" src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/second_user.webp" alt="user avatar" height="220" width="220" loading="lazy">
-                <p class="text-gray-600 md:text-xl"> <span class="font-serif">"</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam consequatur repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad doloribus. <span class="font-serif">"</span></p>
-                <div>
-                    <h6 class="text-lg font-semibold leading-none">Andres Ochoa</h6>
-                    <span class="text-xs text-gray-500">Cliente</span>
-                </div>
-                </div>
-            </div>
-
-            <div class="p-6 border border-gray-100 rounded-xl bg-gray-50 sm:flex sm:space-x-8 sm:p-8">
-                <img class="w-20 h-20 mx-auto rounded-full" src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/first_user.webp" alt="user avatar" height="220" width="220" loading="lazy">
-                <div class="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
-                <p class="text-gray-600"> <span class="font-serif">"</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam consequatur repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad doloribus. <span class="font-serif">"</span></p>
-                <div>
-                    <h6 class="text-lg font-semibold leading-none">Hector Martinez</h6>
-                    <span class="text-xs text-gray-500">Cliente</span>
-                </div>
-                </div>
-            </div>
-            <div class="p-6 border border-gray-100 rounded-xl bg-gray-50 sm:flex sm:space-x-8 sm:p-8">
-                <img class="w-20 h-20 mx-auto rounded-full" src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/third_user.webp" alt="user avatar" height="220" width="220" loading="lazy">
-                <div class="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
-                <p class="text-gray-600"> <span class="font-serif">"</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam consequatur repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad doloribus. <span class="font-serif">"</span></p>
-                <div>
-                    <h6 class="text-lg font-semibold leading-none">Bryan Hernandez</h6>
-                    <span class="text-xs text-gray-500">Cliente</span>
-                </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-    <!--footer-->
-    <footer class="bg-gray-100 dark:bg-zinc-900">
-    <div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 text-black dark:text-white">
-        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
-        <div>
-        <h2 class="text-xl md:text-2xl
-                font-bold
-                text-black
-                dark:text-white">Proyecto Café</h2>
-            <p class="max-w-xs mt-4 text-sm text-gray-600">
-            Donde cada taza cuenta una historia y cada libro abre un nuevo mundo.
+            <p class="mb-8 md:pl-0  pl-2 pr-2 leading-relaxed text-zinc-500">
+                Donde cada taza cuenta una historia y cada libro abre un nuevo mundo. Bienvenido a Proyecto Café.
             </p>
-            <div class="flex mt-8 space-x-6 text-gray-600">
-            <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
-                <span class="sr-only"> Facebook </span>
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
-                </svg>
-            </a>
-            <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
-                <span class="sr-only"> Instagram </span>
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clipRule="evenodd" />
-                </svg>
-            </a>
-            <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
-                <span class="sr-only"> Twitter </span>
-                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                </svg>
-            </a>
+            <div class="flex justify-center">
+                <a asp-action="Iniciar" asp-controller="Signin"
+                    class="inline-flex text-white bg-amber-700 border-0 py-2 px-6 focus:outline-none hover:bg-amber-600 rounded text-lg">
+                    Iniciar Sesión
+                </a>
+                <a href="#"
+                    class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
+                    Ver más</a>
             </div>
         </div>
-        <div class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
-            <div>
-                <p class="font-medium">
-                    Compañia
-                </p>
-                <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                    <a class="hover:opacity-75" href> Sobre Nosotros </a>
-                </nav>
-            </div>
-            <div>
-                <p class="font-medium">
-                    Servicios
-                </p>
-                <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                    <a class="hover:opacity-75" href> Productos </a>
-                    <a class="hover:opacity-75" href> Promociones </a>
-                </nav>
-            </div>
-            <div>
-                <p class="font-medium">
-                    Legal
-                </p>
-                <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
-                    <a class="hover:opacity-75" href> Politica de privacidad </a>
-                    <a class="hover:opacity-75" href> Terminos &amp; Condiciones </a>
-                    <a class="hover:opacity-75" href> Accessibilidad </a>
-                </nav>
-            </div>
+        <div class="max-w-lg lg:w-full mb-5 md:mb-0 w-3/6">
+            <img class="object-cover object-center rounded aspect-[16/9] lg:aspect-[9/16]" alt="hero" src="~/img/hero-coffe.jpg">
         </div>
-        </div>
-        <p class="mt-8 text-xs text-gray-800">
-        © 2023 Proyecto Café
-        </p>
     </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-</body>
-</html>
+</header>
+<!--about us-->
+<section id="nosotros" class="py-20 text-gray-600 body-font bg-white dark:bg-zinc-800 md:overflow-hidden">
+    <div class="h-full container mx-auto flex md:px-20 py-10 lg:flex-row flex-col-reverse items-center md:justify-center">            
+        <div class="max-w-lg lg:w-full mb-5 md:mb-0 w-3/6">
+            <img class="object-cover object-center rounded aspect-[16/9]" alt="hero" src="~/img/about.jpg">
+        </div>
+        <div
+            class="lg:flex-grow lg:w-1.5/2 lg:pl-20 flex flex-col lg:items-start lg:text-left lg:mb-0 mb-16 lg:mt-0 items-center text-center">
+            <h1
+                class="text-xl font-extrabold leading-9 tracking-tight mb-3 text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-3xl md:leading-normal">
+                Sobre Nosotros
+            </h1>
+            <p class="mb-8 md:pl-0  pl-2 pr-2 leading-relaxed text-zinc-500 max-w-lg">
+                Nuestro equipo está comprometido en brindarte una experiencia única.
+                Explora nuestra colección de libros digitales mientras disfrutas del aroma del café recién hecho.
+                Nos esforzamos por crear un ambiente cálido y amigable donde los amantes del café y los lectores ávidos 
+                pueden reunirse, aprender y compartir sus pasiones.
+            </p>
+            <h3 class="text-xl lg:text-2xl font-semibold mb-2 text-gray-900 dark:text-gray-100">Horarios de Atención:</h3>
+            <p class="text-zinc-500 list-disc">Lunes a Viernes: 8:00 am - 5:00 pm</p>
+
+        </div>
+    </div>
+</section>
+<!--Productos-->
+<div id="productos" class="py-10 bg-white dark:bg-zinc-800">
+    <div class="container mx-auto flex flex-col gap-8 md:px-24 py-10">
+        <h1 class="text-xl font-extrabold leading-9 tracking-tight mb-3 text-gray-900 dark:text-gray-100 sm:text-2xl sm:leading-10 md:text-3xl md:leading-normal text-center">
+        Productos
+        </h1>
+        <div class="flex justify-between items-center">
+            <div class="flex justify-start items-center gap-4">
+                <button id="scroll-left-button" class="bg-amber-700 hover:bg-amber-500 px-4 py-2 rounded-full"><i class="fas fa-chevron-left"></i></button>
+                <button id="scroll-right-button" class="bg-amber-700 hover:bg-amber-500 px-4 py-2 rounded-full"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <a href="#" class="px-3 py-2 rounded hover:bg-amber-700 text-zinc-500 hover:text-white">Ver todos</a>
+        </div>
+        
+        <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
+            <div class="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 ">
+                <div class="inline-block px-3">
+                    <div class="relative w-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-700 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300 ease-in-out group">
+                        <img src="~/img/libro.jpg" class="object-cover object-center w-full" alt="/">
+                        <div class="absolute bottom-4 right-4 px-3 py-2 rounded backdrop-blur-md cursor-pointer">
+                            <i class="fas fa-hand-point-up text-amber-600 text-2xl"></i>
+                        </div>
+                        <div class="absolute hidden group-hover:block top-0 left-0 w-full h-full z-10 bg-black/80 opacity-0 transform scale-95 group-hover:opacity-100 group-hover:scale-100 transition-opacity duration-300 ease-in-out">
+                            <div class="w-full h-full flex flex-col gap-8 justify-center items-center">
+                                <h2 class="text-white text-2xl font-semibold">Titulo</h2>
+                                <span class="px-3 py-1 bg-green-800 rounded">
+                                    <p class="text-green-300">Disponible</p>
+                                </span>
+                                <a href="#" class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 text-white text-center cursor-pointer">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Contactar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class="relative w-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-700 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300 ease-in-out group">
+                        <img src="~/img/libro2.jpg" class="object-cover object-center w-full" alt="/">
+                        <div class="absolute bottom-4 right-4 px-3 py-2 rounded backdrop-blur-md cursor-pointer">
+                            <i class="fas fa-hand-point-up text-amber-600 text-2xl"></i>
+                        </div>
+                        <div class="absolute hidden group-hover:block top-0 left-0 w-full h-full z-10 bg-black/80 transition duration-500 ease-in-out">
+                            <div class="w-full h-full flex flex-col gap-8 justify-center items-center">
+                                <h2 class="text-white text-2xl font-semibold">Titulo</h2>
+                                <span class="px-3 py-1 bg-green-800 rounded">
+                                    <p class="text-green-300">Disponible</p>
+                                </span>
+                                <a href="#" class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 text-white text-center cursor-pointer">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Contactar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class="relative w-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-700 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300 ease-in-out group">
+                        <img src="~/img/libro3.jpg" class="object-cover object-center w-full" alt="/">
+                        <div class="absolute bottom-4 right-4 px-3 py-2 rounded backdrop-blur-md cursor-pointer">
+                            <i class="fas fa-hand-point-up text-amber-600 text-2xl"></i>
+                        </div>
+                        <div class="absolute hidden group-hover:block top-0 left-0 w-full h-full z-10 bg-black/80 transition duration-500 ease-in-out">
+                            <div class="w-full h-full flex flex-col gap-8 justify-center items-center">
+                                <h2 class="text-white text-2xl font-semibold">Titulo</h2>
+                                <span class="px-3 py-1 bg-green-800 rounded">
+                                    <p class="text-green-300">Disponible</p>
+                                </span>
+                                <a href="#" class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 text-white text-center cursor-pointer">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Contactar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class="relative w-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-700 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300 ease-in-out group">
+                        <img src="~/img/libro4.jpg" class="object-cover object-center w-full" alt="/">
+                        <div class="absolute bottom-4 right-4 px-3 py-2 rounded backdrop-blur-md cursor-pointer">
+                            <i class="fas fa-hand-point-up text-amber-600 text-2xl"></i>
+                        </div>
+                        <div class="absolute hidden group-hover:block top-0 left-0 w-full h-full z-10 bg-black/80 transition duration-500 ease-in-out">
+                            <div class="w-full h-full flex flex-col gap-8 justify-center items-center">
+                                <h2 class="text-white text-2xl font-semibold">Titulo</h2>
+                                <span class="px-3 py-1 bg-green-800 rounded">
+                                    <p class="text-green-300">Disponible</p>
+                                </span>
+                                <a href="#" class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 text-white text-center cursor-pointer">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Contactar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class="relative w-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-700 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300 ease-in-out group">
+                        <img src="~/img/libro5.jpg" class="object-cover object-center w-full" alt="/">
+                        <div class="absolute bottom-4 right-4 px-3 py-2 rounded backdrop-blur-md cursor-pointer">
+                            <i class="fas fa-hand-point-up text-amber-600 text-2xl"></i>
+                        </div>
+                        <div class="absolute hidden group-hover:block top-0 left-0 w-full h-full z-10 bg-black/80 transition duration-500 ease-in-out">
+                            <div class="w-full h-full flex flex-col gap-8 justify-center items-center">
+                                <h2 class="text-white text-2xl font-semibold">Titulo</h2>
+                                <span class="px-3 py-1 bg-green-800 rounded">
+                                    <p class="text-green-300">Disponible</p>
+                                </span>
+                                <a href="#" class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 text-white text-center cursor-pointer">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Contactar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class="relative w-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-700 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300 ease-in-out group">
+                        <img src="~/img/libro6.jpg" class="object-cover object-center w-full" alt="/">
+                        <div class="absolute bottom-4 right-4 px-3 py-2 rounded backdrop-blur-md cursor-pointer">
+                            <i class="fas fa-hand-point-up text-amber-600 text-2xl"></i>
+                        </div>
+                        <div class="absolute hidden group-hover:block top-0 left-0 w-full h-full z-10 bg-black/80 transition duration-500 ease-in-out">
+                            <div class="w-full h-full flex flex-col gap-8 justify-center items-center">
+                                <h2 class="text-white text-2xl font-semibold">Titulo</h2>
+                                <span class="px-3 py-1 bg-green-800 rounded">
+                                    <p class="text-green-300">Disponible</p>
+                                </span>
+                                <a href="#" class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 text-white text-center cursor-pointer">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Contactar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class="relative w-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-700 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300 ease-in-out group">
+                        <img src="~/img/libro7.jpg" class="object-cover object-center w-full" alt="/">
+                        <div class="absolute bottom-4 right-4 px-3 py-2 rounded backdrop-blur-md cursor-pointer">
+                            <i class="fas fa-hand-point-up text-amber-600 text-2xl"></i>
+                        </div>
+                        <div class="absolute hidden group-hover:block top-0 left-0 w-full h-full z-10 bg-black/80 transition duration-500 ease-in-out">
+                            <div class="w-full h-full flex flex-col gap-8 justify-center items-center">
+                                <h2 class="text-white text-2xl font-semibold">Titulo</h2>
+                                <span class="px-3 py-1 bg-green-800 rounded">
+                                    <p class="text-green-300">Disponible</p>
+                                </span>
+                                <a href="#" class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 text-white text-center cursor-pointer">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Contactar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class="relative w-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-700 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300 ease-in-out group">
+                        <img src="~/img/libro8.jpg" class="object-cover object-center w-full" alt="/">
+                        <div class="absolute bottom-4 right-4 px-3 py-2 rounded backdrop-blur-md cursor-pointer">
+                            <i class="fas fa-hand-point-up text-amber-600 text-2xl"></i>
+                        </div>
+                        <div class="absolute hidden group-hover:block top-0 left-0 w-full h-full z-10 bg-black/80 transition duration-500 ease-in-out">
+                            <div class="w-full h-full flex flex-col gap-8 justify-center items-center">
+                                <h2 class="text-white text-2xl font-semibold">Titulo</h2>
+                                <span class="px-3 py-1 bg-green-800 rounded">
+                                    <p class="text-green-300">Disponible</p>
+                                </span>
+                                <a href="#" class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 text-white text-center cursor-pointer">
+                                    <i class="fab fa-whatsapp"></i>
+                                    Contactar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--testimonios-->
+<div id="testimonios" class="py-16 bg-white dark:bg-zinc-800">  
+    <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+        <h2 class="mb-12 text-center text-2xl text-gray-900 dark:text-gray-100 font-bold md:text-4xl">¿Que dicen nuestros clientes?</h2>
+        <div class="grid gap-8 md:grid-rows-2 lg:grid-cols-2">
+        <div class="row-span-2 p-6 border border-gray-100 rounded-xl bg-gray-50 text-center sm:p-8">
+            <div class="h-full flex flex-col justify-center space-y-4">
+            <img class="w-20 h-20 mx-auto rounded-full" src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/second_user.webp" alt="user avatar" height="220" width="220" loading="lazy">
+            <p class="text-gray-600 md:text-xl"> <span class="font-serif">"</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam consequatur repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad doloribus. <span class="font-serif">"</span></p>
+            <div>
+                <h6 class="text-lg font-semibold leading-none">Andres Ochoa</h6>
+                <span class="text-xs text-gray-500">Cliente</span>
+            </div>
+            </div>
+        </div>
+
+        <div class="p-6 border border-gray-100 rounded-xl bg-gray-50 sm:flex sm:space-x-8 sm:p-8">
+            <img class="w-20 h-20 mx-auto rounded-full" src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/first_user.webp" alt="user avatar" height="220" width="220" loading="lazy">
+            <div class="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
+            <p class="text-gray-600"> <span class="font-serif">"</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam consequatur repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad doloribus. <span class="font-serif">"</span></p>
+            <div>
+                <h6 class="text-lg font-semibold leading-none">Hector Martinez</h6>
+                <span class="text-xs text-gray-500">Cliente</span>
+            </div>
+            </div>
+        </div>
+        <div class="p-6 border border-gray-100 rounded-xl bg-gray-50 sm:flex sm:space-x-8 sm:p-8">
+            <img class="w-20 h-20 mx-auto rounded-full" src="https://tailus.io/sources/blocks/grid-cards/preview/images/avatars/third_user.webp" alt="user avatar" height="220" width="220" loading="lazy">
+            <div class="space-y-4 mt-4 text-center sm:mt-0 sm:text-left">
+            <p class="text-gray-600"> <span class="font-serif">"</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat repellat perspiciatis excepturi est. Non ipsum iusto aliquam consequatur repellat provident, omnis ut, sapiente voluptates veritatis cum deleniti repudiandae ad doloribus. <span class="font-serif">"</span></p>
+            <div>
+                <h6 class="text-lg font-semibold leading-none">Bryan Hernandez</h6>
+                <span class="text-xs text-gray-500">Cliente</span>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<footer class="bg-gray-100 dark:bg-zinc-900">
+<div class="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 text-black dark:text-white">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+    <div>
+    <h2 class="text-xl md:text-2xl
+            font-bold
+            text-black
+            dark:text-white">Proyecto Café</h2>
+        <p class="max-w-xs mt-4 text-sm text-gray-600">
+        Donde cada taza cuenta una historia y cada libro abre un nuevo mundo.
+        </p>
+        <div class="flex mt-8 space-x-6 text-gray-600">
+        <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+            <span class="sr-only"> Facebook </span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
+            </svg>
+        </a>
+        <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+            <span class="sr-only"> Instagram </span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clipRule="evenodd" />
+            </svg>
+        </a>
+        <a class="hover:opacity-75" href target="_blank" rel="noreferrer">
+            <span class="sr-only"> Twitter </span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+            </svg>
+        </a>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+            <p class="font-medium">
+                Compañia
+            </p>
+            <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a class="hover:opacity-75" href> Sobre Nosotros </a>
+            </nav>
+        </div>
+        <div>
+            <p class="font-medium">
+                Servicios
+            </p>
+            <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a class="hover:opacity-75" href> Productos </a>
+                <a class="hover:opacity-75" href> Promociones </a>
+            </nav>
+        </div>
+        <div>
+            <p class="font-medium">
+                Legal
+            </p>
+            <nav class="flex flex-col mt-4 space-y-2 text-sm text-gray-500">
+                <a class="hover:opacity-75" href> Politica de privacidad </a>
+                <a class="hover:opacity-75" href> Terminos &amp; Condiciones </a>
+                <a class="hover:opacity-75" href> Accesibilidad </a>
+            </nav>
+        </div>
+    </div>
+    </div>
+    <p class="mt-8 text-xs text-gray-800">
+    © 2023 Proyecto Café
+    </p>
+</div>
+</footer>

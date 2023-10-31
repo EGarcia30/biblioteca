@@ -1,0 +1,85 @@
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="~/img/biblioteca.png">
+    <title>Registrarse | Proyecto Café</title>
+    <!--Css y Tailwind-->
+    <link rel="stylesheet" href="~/css/output.css">
+    <!--Icons-->
+    <script src="https://kit.fontawesome.com/be9e926d45.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="min-h-screen flex flex-col bg-white dark:bg-zinc-800">
+        <div class="absolute top-0 left-0 flex justify-between items-center md:p-4 p-2 w-full">
+            <a asp-action="Index" asp-controller="Home" class="px-3 py-2 rounded bg-amber-700 hover:bg-amber-600 cursor-pointer text-white" >Volver</a>
+            <button id="btnTheme" type="button" class="px-3 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700">
+                <i id="iconTheme" class="fas fa-sun dark:text-amber-300"></i>
+            </button>
+        </div>
+    <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
+        <div class="bg-white dark:bg-zinc-700 px-6 py-4 rounded shadow-md text-black dark:text-white w-full">
+            <h1 class="mb-8 text-3xl text-center font-semibold">Registrarse</h1>
+            <input 
+                type="text"
+                class="block border focus:outline focus:outline-amber-700 w-full p-3 rounded mb-4 text-zinc-500"
+                name="fullname"
+                placeholder="Nombres" />
+            <input 
+                type="text"
+                class="block border focus:outline focus:outline-amber-700 w-full p-3 rounded mb-4 text-zinc-500"
+                name="fullname"
+                placeholder="Apellidos" />
+            <input 
+                type="text"
+                class="block border focus:outline focus:outline-amber-700 w-full p-3 rounded mb-4 text-zinc-500"
+                name="email"
+                placeholder="Email" />
+
+            <input 
+                type="password"
+                class="block border focus:outline focus:outline-amber-700 w-full p-3 rounded mb-4 text-zinc-500"
+                name="password"
+                placeholder="Contraseña" />
+            <label for="birthday" class="text-base text-zinc-400 font-medium md:ml-4 ml-0">Fecha de Nacimiento</label>
+            <input 
+                type="date"
+                class="block border focus:outline focus:outline-amber-700 w-full p-3 rounded mb-4 text-zinc-500"
+                name="birthday"
+                placeholder="Fecha de Nacimiento"/>
+            <button
+                type="submit"
+                class="w-full text-center py-3 rounded bg-amber-600 text-white hover:bg-green-dark focus:outline-none my-1"
+            >
+                Crear Cuenta
+            </button>
+
+            <div class="text-center text-sm text-grey-dark mt-4">
+                Al registrarse aceptas los 
+                <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
+                    Terminos de servicio
+                </a> y la
+                <a class="no-underline border-b border-grey-dark text-grey-dark" href="#">
+                    Política de privacidad
+                </a>
+            </div>
+        </div>
+
+        <div class="dark:text-white mt-5 text-sm">
+            Ya tienes cuenta? 
+            <a asp-action="Iniciar" asp-controller="Signin" class="no-underline border-b border-blue text-blue">
+                Iniciar Sesión
+            </a>.
+        </div>
+    </div>
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+    
+</body>
+</html>
