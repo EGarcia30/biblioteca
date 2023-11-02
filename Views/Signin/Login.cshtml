@@ -30,11 +30,16 @@
                     name="email"
                     placeholder="Email" />
 
-                <input 
+                <div class="relative w-full">
+                    <input 
                     type="password"
                     class="block border focus:outline focus:outline-amber-700 w-full p-3 rounded mb-4 text-zinc-500"
-                    name="password"
+                    name="Password"
                     placeholder="Contraseña" />
+                    <button type="button" id="btnEye" class="absolute inset-y-0 right-0 flex items-center px-3 py-2 rounded">
+                        <i id="iconEye" class="fas fa-eye text-zinc-400"></i>
+                    </button>
+                </div>
                 <button
                     type="submit"
                     class="w-full text-center py-3 rounded bg-amber-600 text-white hover:bg-green-dark focus:outline-none my-1"
@@ -45,13 +50,14 @@
 
             <div class="dark:text-white mt-6">
                 No tienes cuenta? 
-                <a asp-action="Registrar" asp-controller="Signin" class="no-underline border-b border-blue text-blue">
+                <a asp-action="Register" asp-controller="Signin" class="no-underline border-b border-blue text-blue">
                     Registrarse
                 </a>.
             </div>
         </div>
     </div>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/js/password.js"></script>
+<script src="~/js/theme.js"></script>
 </body>
 </html>

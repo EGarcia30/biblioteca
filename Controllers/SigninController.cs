@@ -18,47 +18,55 @@ public class SigninController : Controller
     }
 
     [Route("register")]
-    public IActionResult Registrar()
+    public IActionResult Register()
     {
         ViewBag.Message = "";
         return View();
     }
 
     [HttpPost]
+    [Route("register")]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Registrar(Register user){
-        if(ModelState.IsValid){
-            var registeredUser = _context.Users.Any(u => u.Email == user.Email);
+    public async Task<IActionResult> Register(Register user){
+        try{
+            if(ModelState.IsValid){
+                var registeredUser = _context.Users.Any(u => u.Email == user.Email);
 
-            if(registeredUser){
-                ViewBag.Message = "Email ya registrado. Inicie sesión o regístrese con otra cuenta.";
-                return View();
+                if(registeredUser){
+                    ViewBag.Message = "Email ya registrado. Inicie sesión o regístrese con otra cuenta.";
+                    return View();
+                }
+
+                Hash.CreatePasswordHash(user.Password, out byte[] passwordHash, out byte[] passwordSalt );
+
+                User newUser = new User
+                {
+                    Names = user.Names,
+                    Lastnames = user.Lastnames,
+                    Email = user.Email,
+                    PasswordHash = passwordHash,
+                    PasswordSalt = passwordSalt,
+                    BirthDate = user.BirthDate,
+                    Rol = "Cliente",
+                    Status = 1,
+                    CreatedAt = DateTime.Now
+                };
+
+                _context.Add(newUser);
+                await _context.SaveChangesAsync();
+                return RedirectToAction("Index","Library");
             }
-
-            Hash.CreatePasswordHash(user.Password, out byte[] passwordHash, out byte[] passwordSalt );
-
-            User newUser = new User
-            {
-                Names = user.Names,
-                Lastnames = user.Lastnames,
-                Email = user.Email,
-                PasswordHash = passwordHash,
-                PasswordSalt = passwordSalt,
-                BirthDate = user.BirthDate,
-                Rol = "Cliente",
-                Status = 1,
-                CreatedAt = DateTime.Now
-            };
-
-            _context.Add(newUser);
-            await _context.SaveChangesAsync();
-            return RedirectToAction("Index","Biblioteca");
+            return View();
         }
-        return View();
+        catch(Exception ex){
+            ViewBag.Message = $"Error: {ex.Message}";
+            return View();
+        }
+        
     }
 
     [Route("login")]
-    public IActionResult Iniciar(){
+    public IActionResult Login(){
         return View();
     }
 }

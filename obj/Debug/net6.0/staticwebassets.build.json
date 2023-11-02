@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oI7OM8qO4p0MSA5Yn4kRY2GYwgc1rLzYZg5ZfzhtoHo=",
+  "Hash": "IOXozCYdYiPDQHPpQBeI/eij1WD1I91KlZ+ATozvwAg=",
   "Source": "biblioteca",
   "BasePath": "_content/biblioteca",
   "Mode": "Default",
@@ -323,6 +323,40 @@
       "OriginalItemSpec": "wwwroot\\img\\libro9.jpg"
     },
     {
+      "Identity": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\js\\menu.js",
+      "SourceId": "biblioteca",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\",
+      "BasePath": "_content/biblioteca",
+      "RelativePath": "js/menu.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\menu.js"
+    },
+    {
+      "Identity": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\js\\password.js",
+      "SourceId": "biblioteca",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\",
+      "BasePath": "_content/biblioteca",
+      "RelativePath": "js/password.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\password.js"
+    },
+    {
       "Identity": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\js\\site.js",
       "SourceId": "biblioteca",
       "SourceType": "Discovered",
@@ -338,6 +372,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\js\\theme.js",
+      "SourceId": "biblioteca",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\",
+      "BasePath": "_content/biblioteca",
+      "RelativePath": "js/theme.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\theme.js"
     },
     {
       "Identity": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
