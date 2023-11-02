@@ -1,3 +1,4 @@
+@model biblioteca.Models.signin.Register;
 @{
     Layout = null;
 }
@@ -25,39 +26,49 @@
     <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
         <div class="bg-white dark:bg-zinc-700 px-6 py-4 rounded shadow-md text-black dark:text-white w-full">
             <h1 class="mb-8 text-3xl text-center font-semibold">Registrarse</h1>
-            <input 
+            <form action="">
+                <input 
                 type="text"
                 class="block border focus:outline focus:outline-amber-700 w-full p-3 rounded mb-4 text-zinc-500"
-                name="fullname"
+                asp-for="Names"
                 placeholder="Nombres" />
-            <input 
-                type="text"
-                class="block border focus:outline focus:outline-amber-700 w-full p-3 rounded mb-4 text-zinc-500"
-                name="fullname"
-                placeholder="Apellidos" />
-            <input 
-                type="text"
-                class="block border focus:outline focus:outline-amber-700 w-full p-3 rounded mb-4 text-zinc-500"
-                name="email"
-                placeholder="Email" />
+                <span asp-validation-for="Names" class="text-danger"></span>
+                <input 
+                    type="text"
+                    class="block border focus:outline focus:outline-amber-700 w-full p-3 rounded mb-4 text-zinc-500"
+                    asp-for="Lastnames"
+                    placeholder="Apellidos" />
+                <span asp-validation-for="Lastnames" class="text-danger"></span>
+                <input 
+                    type="text"
+                    class="block border focus:outline focus:outline-amber-700 w-full p-3 rounded mb-4 text-zinc-500"
+                    asp-for="Email"
+                    placeholder="Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
 
-            <input 
-                type="password"
-                class="block border focus:outline focus:outline-amber-700 w-full p-3 rounded mb-4 text-zinc-500"
-                name="password"
-                placeholder="Contraseña" />
-            <label for="birthday" class="text-base text-zinc-400 font-medium md:ml-4 ml-0">Fecha de Nacimiento</label>
-            <input 
-                type="date"
-                class="block border focus:outline focus:outline-amber-700 w-full p-3 rounded mb-4 text-zinc-500"
-                name="birthday"
-                placeholder="Fecha de Nacimiento"/>
-            <button
-                type="submit"
-                class="w-full text-center py-3 rounded bg-amber-600 text-white hover:bg-green-dark focus:outline-none my-1"
-            >
-                Crear Cuenta
-            </button>
+                <input 
+                    type="password"
+                    class="block border focus:outline focus:outline-amber-700 w-full p-3 rounded mb-4 text-zinc-500"
+                    asp-for="Password"
+                    placeholder="Contraseña" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+                <label for="birthday" class="text-base text-zinc-400 font-medium md:ml-4 ml-0">Fecha de Nacimiento</label>
+                <input 
+                    type="date"
+                    class="block border focus:outline focus:outline-amber-700 w-full p-3 rounded mb-4 text-zinc-500"
+                    asp-for="BirthDate"
+                    placeholder="Fecha de Nacimiento"/>
+                <span asp-validation-for="BirthDate" class="text-danger"></span>
+                <div class="w-full">
+                    <span class="text-danger">@ViewBag.Message</span>
+                </div>
+                <button
+                    type="submit"
+                    class="w-full text-center py-3 rounded bg-amber-700 hover:bg-amber-600 text-white hover:bg-green-dark focus:outline-none my-1"
+                >
+                    Crear Cuenta
+                </button>
+            </form>
 
             <div class="text-center text-sm text-grey-dark mt-4">
                 Al registrarse aceptas los 

@@ -1,4 +1,13 @@
+using biblioteca.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+//Conexion a Base de datos
+string connectionName = "bibliotecaDB";
+var connectionString = builder.Configuration.GetConnectionString(connectionName);
+
+builder.Services.AddDbContext<proyecto_cafeContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
