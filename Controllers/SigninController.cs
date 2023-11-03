@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using biblioteca.Models;
 using biblioteca.Models.signin;
 using biblioteca.helpers;
+using Microsoft.EntityFrameworkCore;
 
 namespace biblioteca.Controllers;
 
@@ -54,6 +55,9 @@ public class SigninController : Controller
 
                 _context.Add(newUser);
                 await _context.SaveChangesAsync();
+
+                var userClaim = _context.Users.FirstOrDefault(uc => uc.Email.Equals(newUser.Email));
+                Auth.CreateCookie(HttpContext,userClaim!);                
                 return RedirectToAction("Index","Library");
             }
             return View();
@@ -68,5 +72,39 @@ public class SigninController : Controller
     [Route("login")]
     public IActionResult Login(){
         return View();
+    }
+
+    [HttpPost]
+    [Route("login")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Login(Login login){
+        try{
+            if(ModelState.IsValid){
+                var verifyUser = _context.Users.Any( vu => vu.Email.Equals(login.Email));
+                if(!verifyUser){
+                    ViewBag.Message = "Usuario no encontrado.";
+                    return View();
+                }
+
+                var userBd = await _context.Users.FirstOrDefaultAsync(ub => ub.Email.Equals(login.Email));
+                if(!Hash.VerifyPasswordHash(login.password, userBd!.PasswordHash!, userBd.PasswordSalt!)){
+                    ViewBag.Message = "Constraseña incorrecta.";
+                    return View();
+                }
+
+                Auth.CreateCookie(HttpContext,userBd);
+                RedirectToAction("Index","Library");
+            }
+            return View();
+        }
+        catch(Exception ex){
+            ViewBag.Message = $"Error: {ex.Message}";
+            return View();
+        }
+    }
+
+    public IActionResult Logout(){
+        Auth.DeleteCookie(HttpContext);
+        return RedirectToAction("Index", "Home");
     }
 }

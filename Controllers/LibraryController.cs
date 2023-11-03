@@ -1,7 +1,9 @@
 using biblioteca.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace biblioteca.Controllers;
+[Authorize]
 public class LibraryController : Controller
 {
     public readonly proyecto_cafeContext _context;
@@ -10,6 +12,7 @@ public class LibraryController : Controller
         _context = context;
     }
 
+    [Authorize(Roles = "Administrador,Cliente")]
     public IActionResult Index(){
         return View();
     }

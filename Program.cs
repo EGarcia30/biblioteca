@@ -1,4 +1,5 @@
 using biblioteca.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,14 @@ string connectionName = "bibliotecaDB";
 var connectionString = builder.Configuration.GetConnectionString(connectionName);
 
 builder.Services.AddDbContext<proyecto_cafeContext>(options => options.UseSqlServer(connectionString));
+
+//Cookie persistencia de usuario
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+.AddCookie(options => {
+    options.LoginPath = "/Signin/Login";
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
+    options.AccessDeniedPath = "/";
+});
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -27,6 +36,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

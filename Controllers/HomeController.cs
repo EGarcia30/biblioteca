@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using biblioteca.Models;
+using System.Security.Claims;
 
 namespace biblioteca.Controllers;
 
@@ -15,6 +16,16 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        if(HttpContext.User.Identity.IsAuthenticated){
+            var role = HttpContext.User.FindFirstValue(ClaimTypes.Role);
+
+            switch(role){
+                case "Cliente":
+                    return RedirectToAction("Index","Library");
+                default:
+                    return View();
+            }
+        }
         return View();
     }
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
