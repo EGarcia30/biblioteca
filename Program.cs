@@ -13,9 +13,9 @@ builder.Services.AddDbContext<proyecto_cafeContext>(options => options.UseSqlSer
 //Cookie persistencia de usuario
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 .AddCookie(options => {
-    options.LoginPath = "/Signin/Login";
+    options.LoginPath = "/Login";
     options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
-    options.AccessDeniedPath = "/";
+    options.AccessDeniedPath = "/Login";
 });
 
 // Add services to the container.

@@ -4,9 +4,11 @@ namespace biblioteca.Models.signin{
     public class Register{
         [Required(ErrorMessage = "Nombres son requeridos.")]
         public string Names { get; set; } = null!;
-        public string? Lastnames { get; set; }
+        public string Lastnames { get; set; }
         [Required(ErrorMessage = "Email es requerido."),EmailAddress]
         public string Email { get; set; } = null!;
+        [Required(ErrorMessage = "Nombre de usuario es requerido.")]
+        public string Username { get; set; }
         [Required(ErrorMessage = "Contraseña es requerido.")]
         public string Password { get; set;} = null!;
         [Required(ErrorMessage = "Fecha de nacimiento es requerido."),DataType(DataType.Date)]

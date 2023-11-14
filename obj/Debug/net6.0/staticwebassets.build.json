@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IOXozCYdYiPDQHPpQBeI/eij1WD1I91KlZ+ATozvwAg=",
+  "Hash": "AjHun1c+vFmoi+kGx45uxKhU3Qy1p7xr7xpMm3ZrWp4=",
   "Source": "biblioteca",
   "BasePath": "_content/biblioteca",
   "Mode": "Default",
@@ -338,6 +338,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\menu.js"
+    },
+    {
+      "Identity": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\js\\modal.js",
+      "SourceId": "biblioteca",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\",
+      "BasePath": "_content/biblioteca",
+      "RelativePath": "js/modal.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\modal.js"
     },
     {
       "Identity": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\js\\password.js",

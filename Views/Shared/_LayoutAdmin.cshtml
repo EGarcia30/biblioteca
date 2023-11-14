@@ -16,7 +16,7 @@
     <div class="fixed w-full bg-white/80 backdrop-blur-sm dark:bg-zinc-800/80 z-10">
         <div class="max-w-nav mx-auto p-2 md:p-4">
             <div class="w-full flex flex-wrap justify-between items-center">
-                <a asp-action="Index" asp-controller="Home"><h1 class="text-xl md:text-2xl
+                <a asp-action="Index" asp-controller="Admin"><h1 class="text-xl md:text-2xl
                 font-bold
                 text-black
                 dark:text-white">
@@ -30,7 +30,13 @@
                     </div>
                     <ul class="flex lg:flex-row flex-col justify-center items-center gap-6 font-semibold lg:p-0 p-4">
                         <li>
-                            <a asp-action="Index" asp-controller="Library" class="hover:underline hover:underline-offset-4 text-black dark:text-white link">Inicio</a>
+                            <a asp-action="Index" asp-controller="Admin" class="hover:underline hover:underline-offset-4 text-black dark:text-white link">Inicio</a>
+                        </li>
+                        <li>
+                            <a asp-action="Users" asp-controller="Admin" class="hover:underline hover:underline-offset-4 text-black dark:text-white link">Usuarios</a>
+                        </li>
+                        <li>
+                            <a asp-action="Books" asp-controller="Admin" class="hover:underline hover:underline-offset-4 text-black dark:text-white link">Libros</a>
                         </li>
                     </ul>
                 </nav>
@@ -55,5 +61,6 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/menu.js"></script>
     <script src="~/js/theme.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

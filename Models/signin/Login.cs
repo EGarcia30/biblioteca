@@ -5,7 +5,7 @@ namespace biblioteca.Models.signin{
         [Required(ErrorMessage = "El campo de Email es requerido."),EmailAddress]
         public string Email {get; set;} = null!;
 
-        [Required(ErrorMessage = "El campo de contrasea es requerido."), StringLength(20)]
-        public string password {get; set;} = null!;
+        [Required(ErrorMessage = "El campo de contraseña es requerido."), StringLength(20)]
+        public string Password {get; set;} = null!;
     }
  }

@@ -6,7 +6,7 @@ namespace biblioteca.Controllers;
 [Authorize]
 public class LibraryController : Controller
 {
-    public readonly proyecto_cafeContext _context;
+    private readonly proyecto_cafeContext _context;
 
     public LibraryController(proyecto_cafeContext context){
         _context = context;

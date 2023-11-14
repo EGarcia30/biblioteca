@@ -45,6 +45,7 @@ public class SigninController : Controller
                     Names = user.Names,
                     Lastnames = user.Lastnames,
                     Email = user.Email,
+                    Username = user.Username,
                     PasswordHash = passwordHash,
                     PasswordSalt = passwordSalt,
                     BirthDate = user.BirthDate,
@@ -71,6 +72,7 @@ public class SigninController : Controller
 
     [Route("login")]
     public IActionResult Login(){
+        ViewBag.Message = "";
         return View();
     }
 
@@ -87,13 +89,20 @@ public class SigninController : Controller
                 }
 
                 var userBd = await _context.Users.FirstOrDefaultAsync(ub => ub.Email.Equals(login.Email));
-                if(!Hash.VerifyPasswordHash(login.password, userBd!.PasswordHash!, userBd.PasswordSalt!)){
+                if(!Hash.VerifyPasswordHash(login.Password, userBd!.PasswordHash!, userBd.PasswordSalt!)){
                     ViewBag.Message = "Constraseña incorrecta.";
                     return View();
                 }
 
                 Auth.CreateCookie(HttpContext,userBd);
-                RedirectToAction("Index","Library");
+                switch(userBd.Rol){
+                    case "Administrador":
+                        return RedirectToAction("Index","Admin");
+                    case "Cliente":
+                        return RedirectToAction("Index","Library");
+                    default:
+                        return View();
+                }
             }
             return View();
         }
