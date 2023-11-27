@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using biblioteca.Models.signin;
+using biblioteca.Models.product;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
@@ -17,6 +18,7 @@ namespace biblioteca.Models
         {
         }
 
+        public virtual DbSet<Book> Books { get; set; }
         public virtual DbSet<User> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -24,12 +26,54 @@ namespace biblioteca.Models
             if (!optionsBuilder.IsConfigured)
             {
 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                //optionsBuilder.UseSqlServer("Server=DESKTOP-RD5B5QL\\SQLEXPRESS;Database=proyecto_cafe;Trusted_Connection=True;");
+               //optionsBuilder.UseSqlServer("Server=DESKTOP-RD5B5QL\\SQLEXPRESS;Database=proyecto_cafe;Trusted_Connection=True;");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Book>(entity =>
+            {
+                entity.ToTable("books");
+
+                entity.Property(e => e.BookId).HasColumnName("bookId");
+
+                entity.Property(e => e.CreatedAt)
+                    .HasColumnType("datetime")
+                    .HasColumnName("createdAt");
+
+                entity.Property(e => e.DeletedAt)
+                    .HasColumnType("datetime")
+                    .HasColumnName("deletedAt");
+
+                entity.Property(e => e.Description)
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("description");
+
+                entity.Property(e => e.Status).HasColumnName("status");
+
+                entity.Property(e => e.Title)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("title");
+
+                entity.Property(e => e.UpdatedAt)
+                    .HasColumnType("datetime")
+                    .HasColumnName("updatedAt");
+
+                entity.Property(e => e.UrlImagen)
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("urlImagen");
+
+                entity.Property(e => e.UrlPdf)
+                    .HasMaxLength(255)
+                    .IsUnicode(false)
+                    .HasColumnName("urlPdf");
+            });
+
             modelBuilder.Entity<User>(entity =>
             {
                 entity.ToTable("users");

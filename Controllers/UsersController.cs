@@ -85,7 +85,7 @@ public class UsersController : Controller
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Edit(int? id, User user)
+    public async Task<IActionResult> Edit(int? id, User user)
     {
         try{
 
@@ -107,9 +107,11 @@ public class UsersController : Controller
                 }
 
                 user.UpdatedAt = DateTime.Now;
+                _context.Update(user);
+                await _context.SaveChangesAsync();
                 ViewBag.Color ="bg-green-400 text-green-800";
                 ViewBag.Message = "Usuario Actualizado.";
-                return View();
+                return View(user);
             }
 
         }

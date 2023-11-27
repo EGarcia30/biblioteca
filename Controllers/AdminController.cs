@@ -21,7 +21,7 @@ public class AdminController : Controller
     public async Task<IActionResult> Users(string search){
         if(!String.IsNullOrEmpty(search)){
             var searchUser = await _context.Users.Where( u => u.Names.Contains(search) || 
-            u.Lastnames.Contains(search) || u.Email.Contains(search)).ToListAsync();
+            u.Lastnames.Contains(search) || u.Email.Contains(search) || u.Rol.Contains(search)).ToListAsync();
 
             return View(searchUser);
         }
@@ -29,7 +29,13 @@ public class AdminController : Controller
         return View(Users);
     }
 
-    public IActionResult Books(){
-        return View();
+    public async Task<IActionResult> Books(string search){
+        if(!String.IsNullOrEmpty(search)){
+            var searchBook = await _context.Books.Where( sb => sb.Title.Contains(search)).ToListAsync();
+            return View(searchBook);
+        }
+        var Books = await _context.Books.ToListAsync();
+
+        return View(Books);
     } 
 }
