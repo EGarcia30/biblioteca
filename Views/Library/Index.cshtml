@@ -1,6 +1,45 @@
+@model IEnumerable<biblioteca.Models.product.Book>
 @{
     Layout = "~/Views/Shared/_LayoutCliente.cshtml";
-    ViewData["Title"] = "Inicio";
+    ViewData["Title"] = "Libreria";
 }
 
-<h1 class="h-screen w-screen flex justify-center items-center">HOLA CLIENTE</h1>
+<main class="h-screen">
+    <section class="h-fit w-full flex flex-col items-center gap-4 pt-20 bg-white dark:bg-zinc-800">
+        <h2 class="text-center sm:text-5xl text-xl font-bold uppercase dark:text-white">Catalogo de <strong class="text-amber-700">libros</strong></h2>
+        <form asp-action="Index" asp-controller="Library" class="flex justify-center items-center gap-4">
+            <input 
+                type="text"
+                name="search"
+                placeholder="Buscar"
+                class="block border focus:outline focus:outline-amber-700 w-full p-3 rounded text-zinc-500"
+            />
+            <button type="submit" class="px-3 py-3 rounded bg-amber-700 hover:bg-amber-600">
+                <i class="fas fa-search dark:text-white"></i>
+            </button>
+        </form>
+        <section class="container mx-auto grid grid-cols-responsive place-items-center gap-8 pb-8">
+            @foreach(var item in Model){
+            <div class="relative w-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-zinc-700 backdrop-blur-sm hover:shadow-xl transition-shadow duration-300 ease-in-out group">
+                <img src="@(item.UrlImagen)" class="object-cover object-center w-full" alt="@(item.Title)">
+                <div class="absolute bottom-4 right-4 px-3 py-2 rounded backdrop-blur-md cursor-pointer">
+                    <i class="fas fa-hand-point-up text-amber-600 text-2xl"></i>
+                </div>
+                <div class="absolute hidden group-hover:block top-0 left-0 w-full h-full z-10 bg-black/80 opacity-0 transform scale-95 group-hover:opacity-100 group-hover:scale-100 transition-opacity duration-300 ease-in-out">
+                    <div class="absolute bottom-0 left-0 w-full bg-zinc-800 flex flex-col gap-2 justify-end items-start px-4 pt-4">
+                        <h2 class="text-white text-xl font-semibold text-start">@(item.Title)</h2>
+                        <span class="px-2 py-1 bg-green-800 rounded">
+                            <p class="text-green-300 text-xs">Disponible</p>
+                        </span>
+                        <a asp-action="download" asp-controller="Books" asp-route-uri="@(item.UrlPdf)" class="block w-full my-4 text-center px-3 py-2 rounded bg-red-600 hover:bg-red-700 text-white/80">
+                            <i class="fas fa-file-pdf"></i> Descargar
+                        </a>
+                    </div>
+                </div>
+            </div>
+            }
+        </section>
+        
+    </section>
+
+</main>

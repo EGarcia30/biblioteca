@@ -14,8 +14,14 @@ public class AdminController : Controller
         _context = context;
     }
 
-    public IActionResult Index(){
-        return View();                   
+    public async Task<IActionResult> Index(string search){
+        if(!String.IsNullOrEmpty(search)){
+            var searchBook = await _context.Books.Where( sb => sb.Title.Contains(search)).ToListAsync();
+            return View(searchBook);
+        }
+        var Books = await _context.Books.ToListAsync();
+
+        return View(Books);                   
     }
 
     public async Task<IActionResult> Users(string search){

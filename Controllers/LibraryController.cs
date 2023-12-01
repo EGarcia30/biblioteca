@@ -1,6 +1,7 @@
 using biblioteca.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace biblioteca.Controllers;
 [Authorize]
@@ -13,7 +14,13 @@ public class LibraryController : Controller
     }
 
     [Authorize(Roles = "Administrador,Cliente")]
-    public IActionResult Index(){
-        return View();
+    public async Task<IActionResult> Index(string search){
+        if(!String.IsNullOrEmpty(search)){
+            var searchBook = await _context.Books.Where( sb => sb.Title.Contains(search)).ToListAsync();
+            return View(searchBook);
+        }
+        var Books = await _context.Books.ToListAsync();
+
+        return View(Books); 
     }
 }

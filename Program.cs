@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 //Conexion a Base de datos
+// pro "bibliotecaDB": "Server=sql.bsite.net\\MSSQL2016;Database=vastyscoffee_;User Id=vastyscoffee;password=Vastyscoffee01;Trusted_Connection=True;"
+// pruebas "bibliotecaDB": "Server=DESKTOP-RD5B5QL\\SQLEXPRESS;Database=proyecto_cafe;Trusted_Connection=True;"
 string connectionName = "bibliotecaDB";
 var connectionString = builder.Configuration.GetConnectionString(connectionName);
 
@@ -14,7 +16,7 @@ builder.Services.AddDbContext<proyecto_cafeContext>(options => options.UseSqlSer
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
 .AddCookie(options => {
     options.LoginPath = "/Login";
-    options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
     options.AccessDeniedPath = "/Login";
 });
 
