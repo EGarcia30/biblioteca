@@ -1,0 +1,205 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\biblioteca.bundle.scp.css",
+      "PackagePath": "staticwebassets\\biblioteca.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\archive\\img\\economia-int-12va.PNG",
+      "PackagePath": "staticwebassets\\archive\\img\\economia-int-12va.PNG"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\archive\\img\\economia-internacional.PNG",
+      "PackagePath": "staticwebassets\\archive\\img\\economia-internacional.PNG"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\archive\\img\\estadistica-negocios-economia.PNG",
+      "PackagePath": "staticwebassets\\archive\\img\\estadistica-negocios-economia.PNG"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\archive\\img\\finanzas.PNG",
+      "PackagePath": "staticwebassets\\archive\\img\\finanzas.PNG"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\archive\\img\\gestion-logistica-integral.PNG",
+      "PackagePath": "staticwebassets\\archive\\img\\gestion-logistica-integral.PNG"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\archive\\pdf\\Comerc Int-Gestion-logistica-integral_-Las-Luis-Anibal-Mora-Garcia.pdf",
+      "PackagePath": "staticwebassets\\archive\\pdf\\Comerc Int-Gestion-logistica-integral_-Las-Luis-Anibal-Mora-Garcia.pdf"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\archive\\pdf\\Economia Inter- Novena Edicion Paul Krugman.pdf",
+      "PackagePath": "staticwebassets\\archive\\pdf\\Economia Inter- Novena Edicion Paul Krugman.pdf"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\archive\\pdf\\Economia_Int_Robert_Carbaugh_12th_ed.pdf",
+      "PackagePath": "staticwebassets\\archive\\pdf\\Economia_Int_Robert_Carbaugh_12th_ed.pdf"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\archive\\pdf\\Estadística-Anderson Edición 11.pdf",
+      "PackagePath": "staticwebassets\\archive\\pdf\\Estadística-Anderson Edición 11.pdf"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\archive\\pdf\\Finanzas-Internacionales-Kozikowski-Z-2013.pdf",
+      "PackagePath": "staticwebassets\\archive\\pdf\\Finanzas-Internacionales-Kozikowski-Z-2013.pdf"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\css\\output.css",
+      "PackagePath": "staticwebassets\\css\\output.css"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\about.jpg",
+      "PackagePath": "staticwebassets\\img\\about.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\biblioteca.png",
+      "PackagePath": "staticwebassets\\img\\biblioteca.png"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\hero-coffe.jpg",
+      "PackagePath": "staticwebassets\\img\\hero-coffe.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\libro.jpg",
+      "PackagePath": "staticwebassets\\img\\libro.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\libro1.jpg",
+      "PackagePath": "staticwebassets\\img\\libro1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\libro2.jpg",
+      "PackagePath": "staticwebassets\\img\\libro2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\libro3.jpg",
+      "PackagePath": "staticwebassets\\img\\libro3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\libro4.jpg",
+      "PackagePath": "staticwebassets\\img\\libro4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\libro5.jpg",
+      "PackagePath": "staticwebassets\\img\\libro5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\libro6.jpg",
+      "PackagePath": "staticwebassets\\img\\libro6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\libro7.jpg",
+      "PackagePath": "staticwebassets\\img\\libro7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\libro8.jpg",
+      "PackagePath": "staticwebassets\\img\\libro8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\libro9.jpg",
+      "PackagePath": "staticwebassets\\img\\libro9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\logo-claro.png",
+      "PackagePath": "staticwebassets\\img\\logo-claro.png"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\logo-oscuro.png",
+      "PackagePath": "staticwebassets\\img\\logo-oscuro.png"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\js\\menu.js",
+      "PackagePath": "staticwebassets\\js\\menu.js"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\js\\modal.js",
+      "PackagePath": "staticwebassets\\js\\modal.js"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\js\\password.js",
+      "PackagePath": "staticwebassets\\js\\password.js"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\js\\theme.js",
+      "PackagePath": "staticwebassets\\js\\theme.js"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.biblioteca.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.biblioteca.props",
+      "PackagePath": "build\\biblioteca.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.biblioteca.props",
+      "PackagePath": "buildMultiTargeting\\biblioteca.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.biblioteca.props",
+      "PackagePath": "buildTransitive\\biblioteca.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

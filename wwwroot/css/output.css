@@ -952,6 +952,10 @@ video {
   gap: 2rem;
 }
 
+.gap-12 {
+  gap: 3rem;
+}
+
 .space-x-6 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1.5rem * var(--tw-space-x-reverse));
@@ -1165,6 +1169,11 @@ video {
   padding: 1.5rem;
 }
 
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1190,24 +1199,9 @@ video {
   padding-bottom: 0.25rem;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
 }
 
 .py-3 {
@@ -1223,11 +1217,6 @@ video {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.px-12 {
-  padding-left: 3rem;
-  padding-right: 3rem;
 }
 
 .pb-10 {
@@ -1276,6 +1265,34 @@ video {
 
 .pt-5 {
   padding-top: 1.25rem;
+}
+
+.pt-40 {
+  padding-top: 10rem;
+}
+
+.pt-32 {
+  padding-top: 8rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.pb-11 {
+  padding-bottom: 2.75rem;
+}
+
+.pt-16 {
+  padding-top: 4rem;
+}
+
+.pt-28 {
+  padding-top: 7rem;
 }
 
 .text-left {
@@ -1409,11 +1426,6 @@ video {
 .text-gray-700 {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
-}
-
-.text-gray-800 {
-  --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
 .text-gray-900 {
@@ -1756,6 +1768,10 @@ video {
     margin-bottom: 2rem;
   }
 
+  .sm\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .sm\:mt-0 {
     margin-top: 0px;
   }
@@ -1824,11 +1840,6 @@ video {
     padding-right: 2rem;
   }
 
-  .sm\:py-20 {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-
   .sm\:py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
@@ -1837,6 +1848,23 @@ video {
   .sm\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .sm\:py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .sm\:pt-10 {
+    padding-top: 2.5rem;
+  }
+
+  .sm\:pt-16 {
+    padding-top: 4rem;
+  }
+
+  .sm\:pt-20 {
+    padding-top: 5rem;
   }
 
   .sm\:text-left {
@@ -1885,6 +1913,10 @@ video {
     margin-left: 0.75rem;
   }
 
+  .md\:w-28 {
+    width: 7rem;
+  }
+
   .md\:grid-rows-2 {
     grid-template-rows: repeat(2, minmax(0, 1fr));
   }
@@ -1920,8 +1952,12 @@ video {
     padding-right: 6rem;
   }
 
-  .md\:py-10 {
-    padding-top: 2.5rem;
+  .md\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .md\:pb-10 {
     padding-bottom: 2.5rem;
   }
 

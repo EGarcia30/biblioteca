@@ -14,13 +14,13 @@
 <body>
     <!--navbar-->
     <div class="fixed w-full bg-white/80 backdrop-blur-sm dark:bg-zinc-800/80 z-10">
-        <div class="max-w-nav mx-auto p-2 md:p-4">
+        <div class="max-w-nav mx-auto px-4 md:px-6">
             <div class="w-full flex flex-wrap justify-between items-center">
                 <a asp-action="Index" asp-controller="Home"><h1 class="text-xl md:text-2xl
                 font-bold
                 text-black
                 dark:text-white">
-                    Vasty´s Coffee
+                    <img id="logo" src="~/img/logo-claro.png" alt="Vasty´s Coffe" class="w-20 md:w-28">
                 </h1></a>
                 
                 <div id="bgBlackBtn" class="hidden absolute top-0 left-0 w-screen h-screen bg-black/25"></div>
@@ -35,9 +35,9 @@
                     </ul>
                 </nav>
                 <div class="flex justify-center items-center gap-4">
-                    <button type="button" class="px-3 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700">
+                    <!--<button type="button" class="px-3 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700">
                         <i class="fas fa-user text-black dark:text-white"></i>
-                    </button>
+                    </button>-->
                     <a asp-action="Logout" asp-controller="Signin" class="px-3 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700">
                         <i class="fas fa-sign-out-alt text-amber-600"></i>
                     </a>

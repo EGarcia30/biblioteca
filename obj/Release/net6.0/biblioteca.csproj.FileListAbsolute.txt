@@ -67,3 +67,10 @@ C:\Users\penad\Desktop\aspnet\biblioteca\bin\Release\net6.0\biblioteca1.0\biblio
 C:\Users\penad\Desktop\aspnet\biblioteca\bin\Release\net6.0\biblioteca1.0\biblioteca.runtimeconfig.json
 C:\Users\penad\Desktop\aspnet\biblioteca\bin\Release\net6.0\biblioteca1.0\package-lock.json
 C:\Users\penad\Desktop\aspnet\biblioteca\bin\Release\net6.0\biblioteca1.0\package.json
+C:\Users\penad\Desktop\aspnet\biblioteca\bin\Release\net6.0\biblioteca2.0\web.config
+C:\Users\penad\Desktop\aspnet\biblioteca\bin\Release\net6.0\biblioteca2.0\appsettings.Development.json
+C:\Users\penad\Desktop\aspnet\biblioteca\bin\Release\net6.0\biblioteca2.0\appsettings.json
+C:\Users\penad\Desktop\aspnet\biblioteca\bin\Release\net6.0\biblioteca2.0\biblioteca.deps.json
+C:\Users\penad\Desktop\aspnet\biblioteca\bin\Release\net6.0\biblioteca2.0\biblioteca.runtimeconfig.json
+C:\Users\penad\Desktop\aspnet\biblioteca\bin\Release\net6.0\biblioteca2.0\package-lock.json
+C:\Users\penad\Desktop\aspnet\biblioteca\bin\Release\net6.0\biblioteca2.0\package.json
