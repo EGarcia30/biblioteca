@@ -65,6 +65,18 @@
       "PackagePath": "staticwebassets\\img\\biblioteca.png"
     },
     {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\cliente1.jpg",
+      "PackagePath": "staticwebassets\\img\\cliente1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\cliente2.jpg",
+      "PackagePath": "staticwebassets\\img\\cliente2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\cliente3.jpg",
+      "PackagePath": "staticwebassets\\img\\cliente3.jpg"
+    },
+    {
       "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\hero-coffe.jpg",
       "PackagePath": "staticwebassets\\img\\hero-coffe.jpg"
     },

@@ -23,4 +23,8 @@ public class LibraryController : Controller
 
         return View(Books); 
     }
+
+    public IActionResult Menu(){
+        return View();
+    }
 }
