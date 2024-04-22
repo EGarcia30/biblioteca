@@ -27,4 +27,8 @@ public class LibraryController : Controller
     public IActionResult Menu(){
         return View();
     }
+
+    public IActionResult SalonEvento(){
+        return View();
+    }
 }

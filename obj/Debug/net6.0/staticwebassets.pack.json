@@ -129,6 +129,26 @@
       "PackagePath": "staticwebassets\\img\\logo-oscuro.png"
     },
     {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\menu1.png",
+      "PackagePath": "staticwebassets\\img\\menu1.png"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\menu2.png",
+      "PackagePath": "staticwebassets\\img\\menu2.png"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\menu3.png",
+      "PackagePath": "staticwebassets\\img\\menu3.png"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\menu4.png",
+      "PackagePath": "staticwebassets\\img\\menu4.png"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\js\\img.js",
+      "PackagePath": "staticwebassets\\js\\img.js"
+    },
+    {
       "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\js\\menu.js",
       "PackagePath": "staticwebassets\\js\\menu.js"
     },
