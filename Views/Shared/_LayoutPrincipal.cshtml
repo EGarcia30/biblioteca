@@ -28,12 +28,18 @@
                     <div id="btnClose" class="block lg:hidden absolute top-3 right-4 px-3 py-2 rounded hover:bg-gray-300 dark:hover:bg-gray-700 cursor-pointer">
                         <i class="fas fa-times text-black dark:text-white"></i>
                     </div>
-                    <ul class="flex lg:flex-row flex-col justify-center items-center gap-6 font-semibold lg:p-0 p-4">
+                    <ul class="flex lg:flex-row flex-col justify-center items-center flex-wrap gap-6 font-semibold lg:p-0 p-4">
                         <li>
                             <a asp-action="Index" asp-controller="Home" class="hover:underline hover:underline-offset-4 text-black dark:text-white link">Inicio</a>
                         </li>
                         <li>
                             <a href="#nosotros" class="hover:underline hover:underline-offset-4 text-zinc-500 link">¿Quienes somos?</a>
+                        </li>
+                        <li>
+                            <a href="#mn" class="hover:underline hover:underline-offset-4 text-zinc-500 link">Menú</a>
+                        </li>
+                        <li>
+                            <a href="#salon" class="hover:underline hover:underline-offset-4 text-zinc-500 link">Salon de Evento</a>
                         </li>
                         <li>
                             <a href="#productos" class="hover:underline hover:underline-offset-4 text-zinc-500 link">Productos</a>
@@ -69,6 +75,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/js/menu.js"></script>
     <script src="~/js/theme.js"></script>
+    <script src="~/js/img.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 </body>
 </html>

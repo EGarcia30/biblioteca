@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "Hash": "ULHnq/UL66Q+N9ek6lGfImwX2i/T18O46Je+xX03fv0=",
+  "Hash": "ChJ5YBYbb8bGRvfNsOzUwBs8ua4rNpZJUmYzi0z5TAQ=",
   "Source": "biblioteca",
   "BasePath": "_content/biblioteca",
   "Mode": "Default",
-  "ManifestType": "Build",
+  "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {

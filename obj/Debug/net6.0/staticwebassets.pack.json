@@ -77,6 +77,26 @@
       "PackagePath": "staticwebassets\\img\\cliente3.jpg"
     },
     {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\evento1.jpg",
+      "PackagePath": "staticwebassets\\img\\evento1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\evento2.jpg",
+      "PackagePath": "staticwebassets\\img\\evento2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\evento3.jpg",
+      "PackagePath": "staticwebassets\\img\\evento3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\evento4.jpg",
+      "PackagePath": "staticwebassets\\img\\evento4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\evento5.jpg",
+      "PackagePath": "staticwebassets\\img\\evento5.jpg"
+    },
+    {
       "Id": "C:\\Users\\penad\\Desktop\\aspnet\\biblioteca\\wwwroot\\img\\hero-coffe.jpg",
       "PackagePath": "staticwebassets\\img\\hero-coffe.jpg"
     },

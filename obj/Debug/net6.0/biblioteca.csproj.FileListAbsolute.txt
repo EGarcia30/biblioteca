@@ -101,3 +101,10 @@ C:\Users\penad\Desktop\aspnet\biblioteca\obj\Debug\net6.0\staticwebassets\msbuil
 C:\Users\penad\Desktop\aspnet\biblioteca\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.biblioteca.props
 C:\Users\penad\Desktop\aspnet\biblioteca\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.biblioteca.props
 C:\Users\penad\Desktop\aspnet\biblioteca\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\penad\Desktop\aspnet\biblioteca\bin\Debug\net6.0\biblioteca4.0\web.config
+C:\Users\penad\Desktop\aspnet\biblioteca\bin\Debug\net6.0\biblioteca4.0\appsettings.Development.json
+C:\Users\penad\Desktop\aspnet\biblioteca\bin\Debug\net6.0\biblioteca4.0\appsettings.json
+C:\Users\penad\Desktop\aspnet\biblioteca\bin\Debug\net6.0\biblioteca4.0\biblioteca.deps.json
+C:\Users\penad\Desktop\aspnet\biblioteca\bin\Debug\net6.0\biblioteca4.0\biblioteca.runtimeconfig.json
+C:\Users\penad\Desktop\aspnet\biblioteca\bin\Debug\net6.0\biblioteca4.0\package-lock.json
+C:\Users\penad\Desktop\aspnet\biblioteca\bin\Debug\net6.0\biblioteca4.0\package.json
